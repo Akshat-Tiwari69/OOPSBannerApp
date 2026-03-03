@@ -4,7 +4,7 @@ A progressive Java application demonstrating object-oriented programming princip
 
 ## Project Overview
 
-This application showcases a series of user cases (UC1 through UC5) that progressively build from simple console output to a modular, well-structured banner display system using arrays and string manipulation.
+This application showcases a series of user cases (UC1 through UC6) that progressively build from simple console output to a modular, well-structured banner display system using arrays, string manipulation, and methods.
 
 ## Branch Distribution Strategy
 
@@ -19,7 +19,8 @@ master (Base/Main branch - Documentation & Overview)
       ├── feature/UC2 (Banner with String Concatenation)
       ├── feature/UC3 (Banner with String.join())
       ├── feature/UC4 (Banner with Array & Loop)
-      └── feature/UC5 (Banner with Inline Array Initialization)
+      ├── feature/UC5 (Banner with Inline Array Initialization)
+      └── feature/UC6 (Banner with Helper Methods)
 ```
 
 ### Branch Descriptions & Division
@@ -27,12 +28,13 @@ master (Base/Main branch - Documentation & Overview)
 | Branch | Description | Version | Key Features |
 |--------|-------------|---------|--------------|
 | **master** | Documentation and project overview only | - | README with complete guide, no code |
-| **dev** | Latest development version with all features | 5.0 | UC1-UC5 implementation combined |
+| **dev** | Latest development version with all features | 6.0 | UC1-UC6 implementation combined |
 | **feature/UC1** | Simple output - prints "OOPS" | 1.0 | Single print statement |
 | **feature/UC2** | Banner with string concatenation | 2.0 | ASCII art using `+` operator |
 | **feature/UC3** | Banner with String.join() | 3.0 | Efficient string assembly |
 | **feature/UC4** | Banner with array and loop | 4.0 | Arrays for data, for-each loop |
 | **feature/UC5** | Banner with inline array initialization | 5.0 | Concise array declaration syntax |
+| **feature/UC6** | Banner with helper methods | 6.0 | Static methods for pattern generation |
 
 ### Why This Distribution?
 
@@ -104,6 +106,25 @@ Combines array declaration and initialization using array literal syntax `{ ... 
 
 ---
 
+### UC6: Refactor Banner Logic into Functions ✓
+**Branch:** `feature/UC6` | **Version:** 6.0
+
+Extends UC5 by defining helper methods that generate the banner lines for each character (O, P, S). These static methods encapsulate pattern generation logic, improving modularity and reusability.
+
+**Helper Methods:**
+- `getOPattern()` - Returns the 7-line pattern for letter 'O'
+- `getPPattern()` - Returns the 7-line pattern for letter 'P'
+- `getSPattern()` - Returns the 7-line pattern for letter 'S'
+
+**Benefits:**
+- Improved code reusability and modularity
+- Separation of concerns (pattern generation vs. display)
+- Easier to extend for other words/characters
+- Better maintainability through encapsulation
+- Follows DRY (Don't Repeat Yourself) principle
+
+**Concepts:** Static methods, helper methods, method abstraction, encapsulation, DRY principle
+
 ## How to Use
 ```
 
@@ -132,11 +153,14 @@ git diff feature/UC1 feature/UC5   # Compare first to latest
 | Arrays | 4 | Data structure for storage |
 | For-each Loops | 4 | Iteration over collections |
 | Array Literals | 5 | Concise initialization |
+| Static Methods | 6 | Reusable pattern generation |
+| Helper Methods | 6 | Method abstraction and encapsulation |
 
 ## Author
 Akshat Tiwari
 
 ## Version History
+- **v6.0** - Helper methods for pattern generation (UC6)
 - **v5.0** - Inline array initialization (UC5)
 - **v4.0** - Array with loop (UC4)
 - **v3.0** - String.join refactor (UC3)
